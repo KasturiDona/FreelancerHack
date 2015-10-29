@@ -23,9 +23,37 @@ $colorDefault : #fff;
 
 body {
   font-family: 'Comfortaa', cursive;
-  margin: 0 auto;
   padding: 20px;
   
+}
+
+.index-page {
+	text-align: center;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+tr.success th {
+	text-align: center;
+}
+
+p.btn.btn-primary {
+	background-color: rgb(0,191,255) !important;
+	border: none;
+	margin: 10px;
+}
+
+p.btn.btn-primary a {
+	color: white;
+	text-decoration: none;
+}
+
+p.btn.btn-primary:hover a {
+	color: black;
+	text-decoration: none;
 }
 
 .navbar-default {

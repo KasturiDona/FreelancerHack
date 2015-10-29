@@ -1,6 +1,8 @@
+<div class="index-page">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Jobs</h1>
+<p class="btn btn-primary"><%= link_to 'New Job', new_job_path %></p>
 
 <table class="table table-striped">
   <thead>
@@ -16,11 +18,10 @@
   <tbody>
     <% @jobs.each do |job| %>
       <tr>
-        <td><%= job.user_id %></td>
+        <td><%= link_to job.user_id, job %></td>
         <td><%= job.complete %></td>
         <td><%= job.description %></td>
         <td><%= job.job_type %></td>
-        <td><%= link_to 'Show', job %></td>
         <td><%= link_to 'Edit', edit_job_path(job) %></td>
         <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -29,5 +30,4 @@
 </table>
 
 <br>
-
-<%= link_to 'New Job', new_job_path %>
+</div>

@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Users</h1>
+<div class="index-page">
+<h1>Listing Freelancers</h1>
+<p class="btn btn-primary"><%= link_to 'New Freelancer', new_user_path %></p>
 
 <table class="table table-striped">
 
@@ -20,13 +21,12 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.name %></td>
+        <td><%= link_to user.name, user %></td>
         <td><%= user.collaborator %></td>
         <td><%= user.skillset %></td>
         <td><%= user.rating %></td>
         <td><%= user.hiring_status %></td>
         <td><%= user.account %></td>
-        <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -35,5 +35,5 @@
 </table>
 
 <br>
+</div>
 
-<%= link_to 'New User', new_user_path %>
