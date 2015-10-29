@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700);
+
+body {
+  font-family: 'Comfortaa', cursive;
+  margin: 0 auto;
+  padding: 20px;
+}
