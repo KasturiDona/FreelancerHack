@@ -11,31 +11,31 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => 'form-control' %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :collaborator %><br>
-    <%= f.check_box :collaborator %>
+    <%= f.check_box :collaborator, :class => 'checkbox'  %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :skillset %><br>
-    <%= f.text_area :skillset %>
+    <%= f.text_area :skillset, :class => 'form-control'  %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :rating %><br>
-    <%= f.text_field :rating %>
+    <%= f.text_field :rating, :class => 'form-control'  %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :hiring_status %><br>
-    <%= f.check_box :hiring_status %>
+    <%= f.check_box :hiring_status, :class => 'checkbox'  %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :account %><br>
-    <%= f.text_field :account %>
+    <%= f.text_field :account, :class => 'form-control'  %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions form-group">
+    <%= f.submit :class => 'submit btn btn-primary'%>
   </div>
 <% end %>
