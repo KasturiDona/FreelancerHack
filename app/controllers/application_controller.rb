@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :fetch_current_user
-
+  
   private
   def fetch_current_user
   	if session[:user_id].present?
