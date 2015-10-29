@@ -4,7 +4,6 @@ class CreateProjects < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.boolean :active
-      t.integer :job_id
 
       t.timestamps null: false
     end

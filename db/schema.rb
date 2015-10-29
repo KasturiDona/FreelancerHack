@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20151029030032) do
     t.boolean  "complete"
     t.text     "description"
     t.string   "job_type"
+    t.integer  "project_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -26,7 +27,6 @@ ActiveRecord::Schema.define(version: 20151029030032) do
     t.string   "name"
     t.text     "description"
     t.boolean  "active"
-    t.integer  "job_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

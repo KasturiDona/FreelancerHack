@@ -2,20 +2,20 @@ class SessionController < ApplicationController
   def new
   end
 
-  # creating a new user session when a user logs in
   def create
   	user = User.find_by :email => params[:email]
   	if user.present? && user.authenticate(params[:password])
-  		session[:user_id] = user.id
-  		redirect_to root_path
+  		session[:user_id] = user[:id]
+      flash[:message] = "Welcome back, #{ user.name }"
+  		redirect_to user
   	else
-  		redirect_to login_path
+      redirect_to login_path
+      flash[:message] = "Invalid email or password. Please try again."
   	end
   end
 
-  # deleting a user session when the current user logs out
   def destroy
-    session[:user_id] = nil
-    redirect_to root_path
+  	session[:user_id] = nil
+  	redirect_to root_path
   end
 end
