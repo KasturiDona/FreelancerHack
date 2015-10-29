@@ -17,10 +17,25 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$colorDefault : #fff;
+
 @import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700);
 
 body {
   font-family: 'Comfortaa', cursive;
   margin: 0 auto;
   padding: 20px;
+  
+}
+
+.navbar-default {
+	background-color: rgb(0,191,255) !important;
+	
+	
+}
+.navbar-default .navbar-nav > li > a {
+	color:white;
+}
+.navbar-brand {
+	color:white  !important;
 }
