@@ -11,6 +11,7 @@
       <th>Complete</th>
       <th>Description</th>
       <th>Job type</th>
+      <th>Project</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,10 +19,11 @@
   <tbody>
     <% @jobs.each do |job| %>
       <tr>
-        <td><%= link_to job.user_id, job %></td>
+        <td><%= link_to job.user_id, user.id %></td>
         <td><%= job.complete %></td>
         <td><%= job.description %></td>
         <td><%= job.job_type %></td>
+        <td><%= link_to job.project_id, project.id %></td>
         <td><%= link_to 'Edit', edit_job_path(job) %></td>
         <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

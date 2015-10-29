@@ -17,8 +17,12 @@
 
 <p>
   <strong>Job:</strong>
-  <%= @project.job_id %>
 </p>
+<ul>
+	<% @project.jobs.each do |job| %>
+		<li><%= link_to job.job_type, job %></li>
+	<% end %>
+</ul>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

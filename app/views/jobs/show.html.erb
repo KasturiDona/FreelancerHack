@@ -2,7 +2,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @job.user_id %>
+  <%= link_to @job.user_id, @job.user %>
 </p>
 
 <p>
@@ -18,6 +18,11 @@
 <p>
   <strong>Job type:</strong>
   <%= @job.job_type %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= link_to @job.project_id, @job.project %>
 </p>
 
 <%= link_to 'Edit', edit_job_path(@job) %> |

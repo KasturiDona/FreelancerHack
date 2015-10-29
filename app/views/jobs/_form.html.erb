@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field form-group">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id, :class=> "form-control" %>
+    <label>Freelancer</label>
+    <%= f.select :user_id, User.all.map { |user| [ user.name, user.id ] }, :include_blank => true, :class=> "form-control" %>
   </div>
   <div class="field form-group">
     <%= f.label :complete %><br>
@@ -27,6 +27,12 @@
     <%= f.label :job_type %><br>
     <%= f.text_field :job_type, :class=> "form-control" %>
   </div>
+
+  <div class="field form-group">
+    <label>Project</label>
+    <%= f.select :project_id, Project.all.map { |project| [ project.name, project.id ] }, :include_blank => true, :class=> "form-control" %>
+  </div>
+
   <div class="actions form-group">
     <%= f.submit :class => 'submit btn btn-primary'%>
   </div>
