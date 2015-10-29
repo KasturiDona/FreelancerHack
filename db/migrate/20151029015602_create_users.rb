@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.float :rating
       t.boolean :hiring_status
       t.float :account
-
+      t.string :email
       t.timestamps null: false
     end
   end
