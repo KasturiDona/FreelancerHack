@@ -5,6 +5,7 @@ class CreateJobs < ActiveRecord::Migration
       t.boolean :complete
       t.text :description
       t.string :job_type
+      t.integer :project_id
 
       t.timestamps null: false
     end

@@ -10,31 +10,44 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :collaborator %><br>
-    <%= f.check_box :collaborator %>
-  </div>
-  <div class="field">
-    <%= f.label :skillset %><br>
-    <%= f.text_area :skillset %>
-  </div>
-  <div class="field">
-    <%= f.label :rating %><br>
-    <%= f.text_field :rating %>
-  </div>
-  <div class="field">
-    <%= f.label :hiring_status %><br>
-    <%= f.check_box :hiring_status %>
-  </div>
-  <div class="field">
-    <%= f.label :account %><br>
-    <%= f.text_field :account %>
-  </div>
+  <% if @user.id === @current_user.id %>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="form-group col-md-4">
+        <%= f.label :email, :class => 'sr-only', :for => 'exampleInputEmail3' %>
+        <%= f.email_field :email, :class => 'form-control', :id => 'exampleInputEmail3', :placeholder => 'Email' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="form-group col-md-4">
+        <%= f.label :name, :class => 'sr-only', :for => 'exampleInputName3' %>
+        <%= f.text_field :name, :class => 'form-control', :id => 'exampleInputName3', :placeholder => 'Name' %>
+      </div>
+    </div>  
+    <div class="field">
+      <%= f.label :skillset %><br>
+      <%= f.text_area :skillset %>
+    </div>
+    <div class="field">
+      <%= f.label :hiring_status %><br>
+      <%= f.check_box :hiring_status %>
+    </div>
+  <% else %>
+    <div class="field">
+      <%= f.label :collaborator %><br>
+      <%= f.check_box :collaborator %>
+    </div>
+    <div class="field">
+      <%= f.label :rating %><br>
+      <%= f.text_field :rating %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :account %><br>
+      <%= f.text_field :account %>
+    </div>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
