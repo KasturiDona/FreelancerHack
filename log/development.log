@@ -68,3 +68,145 @@ Processing by JobsController#new as HTML
   Rendered jobs/_form.html.erb (50.9ms)
   Rendered jobs/new.html.erb within layouts/application (53.1ms)
 Completed 200 OK in 96ms (Views: 91.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs/new" for ::1 at 2015-10-29 13:38:57 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by JobsController#new as HTML
+  Rendered jobs/_form.html.erb (15.5ms)
+  Rendered jobs/new.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 224ms (Views: 211.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-29 13:38:57 +1100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-29 13:38:57 +1100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-29 13:38:57 +1100
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-29 13:38:57 +1100
+
+
+Started GET "/assets/scaffolds.self-b91bd9108500c38568460ff825fad9c2dbf14796c3833703de0ce1c6d00df26d.css?body=1" for ::1 at 2015-10-29 13:38:57 +1100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-29 13:38:57 +1100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-29 13:38:57 +1100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-29 13:38:57 +1100
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-29 13:38:57 +1100
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-29 13:38:57 +1100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-29 13:38:57 +1100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-29 13:38:57 +1100
+
+
+Started GET "/" for ::1 at 2015-10-29 13:39:00 +1100
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-29 13:39:00 +1100
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 63ms (Views: 62.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects/new" for ::1 at 2015-10-29 13:39:09 +1100
+Processing by ProjectsController#new as HTML
+  Rendered projects/_form.html.erb (4.5ms)
+  Rendered projects/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 68ms (Views: 61.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/projects" for ::1 at 2015-10-29 13:39:48 +1100
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/uaCIHfU/XuUuR5eoSedrq9T2lH1cuz5HjFuY2VVP3pwEdqtwA4nrIAem/M3d56IiJ4VwZO1q1V4MFEgvfiCcQ==", "project"=>{"name"=>"abc", "description"=>"some new project", "active"=>"1", "job_id"=>""}, "commit"=>"Create Project"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "projects" ("name", "description", "active", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "abc"], ["description", "some new project"], ["active", "t"], ["created_at", "2015-10-29 02:39:48.714693"], ["updated_at", "2015-10-29 02:39:48.714693"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/projects/1
+Completed 302 Found in 9ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/projects/1" for ::1 at 2015-10-29 13:39:48 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 59ms (Views: 40.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/1" for ::1 at 2015-10-29 13:39:53 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-29 13:39:53 +1100
+
+
+Started GET "/assets/scaffolds.self-b91bd9108500c38568460ff825fad9c2dbf14796c3833703de0ce1c6d00df26d.css?body=1" for ::1 at 2015-10-29 13:39:53 +1100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-29 13:39:53 +1100
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-29 13:39:53 +1100
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-29 13:39:53 +1100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-29 13:39:53 +1100
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-29 13:39:53 +1100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-29 13:39:53 +1100
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-29 13:39:53 +1100
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-29 13:39:53 +1100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-29 13:39:53 +1100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-29 13:39:53 +1100
+
+
+Started GET "/" for ::1 at 2015-10-29 13:39:56 +1100
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects/1" for ::1 at 2015-10-29 13:40:12 +1100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.1ms)
