@@ -30,14 +30,26 @@
   <%= @user.account %>
 </p>
 
-<p>
-  <strong>Job:</strong>
-</p>
-<ul>
-  <% @user.jobs.each do |job| %>
-    <li><%= link_to job.job_type, job %></li>
-  <% end %>
-</ul>
+<table class="table">
+
+  <thead>
+    <tr class="success col-md-4">  
+      <th>Job</th>
+      <th>Project</th> 
+      <th colspan="2"></th> 
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user.jobs.each do |job| %>
+      <tr class="middle col-md-4">
+        <td><%= link_to job.job_type, job %></td>
+        <td><%= link_to job.project.name, job.project %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
